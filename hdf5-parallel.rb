@@ -22,7 +22,7 @@ class Hdf5Parallel < Formula
     #ENV["OMPI_FC"] = "gfortran"
     #ENV["FC"] = "mpifort"
     mkdir "build" do
-      system "cmake", "..", *std_cmake_args, "-DHDF5_ENABLE_PARALLEL=ON", "-DHDF5_BUILD_CPP_LIB=ON"
+      system "cmake", "..", *std_cmake_args, "-DHDF5_ENABLE_PARALLEL=ON", "-DHDF5_BUILD_CPP_LIB=OFF"
       system "make", "install"
     end
   end
